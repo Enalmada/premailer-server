@@ -7,3 +7,16 @@ So we put together this simple Sinatra wrapper to act as a web-interface to Prem
 Just do a form POST with "html" and you'll receive JSON of the inlined HTML with the html and txt versions.
 
 Relies on nokogiri within Premailer, and uses Zurb's recommended premailer settings.
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html
+
+# TO RUN 
+
+git clone <repo>
+cd premailer-server
+eb init  (choose latest ruby)
+eb create premailer-server --sample
+eb deploy
+curl --data "html=<your html>" http://your.eb.url
+
+see: https://stackoverflow.com/a/39034998/1502448

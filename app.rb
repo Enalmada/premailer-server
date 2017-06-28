@@ -22,7 +22,8 @@ PREMAILER_SETTINGS = {  line_length: 65,
                         io_exceptions: false,
                         include_link_tags: true,
                         include_style_tags: true,
-                        input_encoding: 'ASCII-8BIT',
+                        input_encoding: 'UTF-8',
+                        output_encoding: 'US-ASCII',
                         replace_html_entities: false,
                         warn_level: Premailer::Warnings::SAFE
                       }
@@ -45,6 +46,6 @@ class PremailerServer < Sinatra::Base
     data.to_json
   end
   get '/heartbeat' do
-    "Hello World!"
+    "Hello World2!"
   end
 end
