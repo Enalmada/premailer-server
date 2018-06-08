@@ -10,13 +10,19 @@ Relies on nokogiri within Premailer, and uses Zurb's recommended premailer setti
 
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_sinatra.html
 
-# TO RUN 
+## TO RUN 
 
 git clone <repo>
+
 cd premailer-server
-eb init  (choose latest ruby)
-eb create premailer-server --sample
+
+eb init
+
+eb create premailer-server
+
 eb deploy
+
+## TO TEST
 curl --data "html=<your html>" http://your.eb.url
 
 see: https://stackoverflow.com/a/39034998/1502448
